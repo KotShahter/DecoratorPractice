@@ -12,7 +12,7 @@ public class SnowDecorator extends BaseDishDecorator {
     @Override
     public int getPrice()
     {
-        return wrapee.getPrice() + 40;
+        return super.getPrice() + 40;
     }
     
     public SnowDecorator(DishInterface dish) 

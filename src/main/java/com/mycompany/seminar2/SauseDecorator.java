@@ -12,7 +12,7 @@ public class SauseDecorator extends BaseDishDecorator{
     @Override
     public int getPrice()
     {
-        return wrapee.getPrice() + 20;
+        return super.getPrice() + 20;
     }
     
     public SauseDecorator(DishInterface dish) 

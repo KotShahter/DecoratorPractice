@@ -9,12 +9,15 @@ package com.mycompany.seminar2;
  * @author IDTYZ
  */
 abstract class BaseDishDecorator implements DishInterface {
-    protected DishInterface wrapee;
+    private DishInterface wrapee;
     
     public BaseDishDecorator(DishInterface dish)
     {
         wrapee = dish;
     }
     
-    abstract public int getPrice();
+    public int getPrice()
+    {
+        return wrapee.getPrice();
+    };
 }

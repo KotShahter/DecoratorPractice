@@ -12,7 +12,7 @@ public class DoubleMeatDecorator extends BaseDishDecorator{
     @Override
     public int getPrice()
     {
-        return wrapee.getPrice() + 80;
+        return super.getPrice() + 80;
     }
     
     public DoubleMeatDecorator(DishInterface dish) 

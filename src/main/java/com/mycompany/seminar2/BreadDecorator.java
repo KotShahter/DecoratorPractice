@@ -12,7 +12,7 @@ public class BreadDecorator extends BaseDishDecorator{
     @Override
     public int getPrice()
     {
-        return wrapee.getPrice() + 5;
+        return super.getPrice() + 5;
     }
     
     public BreadDecorator(DishInterface dish) 
