@@ -10,4 +10,5 @@ package com.mycompany.seminar2;
  */
 public interface DishInterface {
     int getPrice();
+    String getName();
 }

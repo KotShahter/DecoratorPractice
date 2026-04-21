@@ -20,4 +20,9 @@ abstract class BaseDishDecorator implements DishInterface {
     {
         return wrapee.getPrice();
     };
+    
+    public String getName()
+    {
+        return wrapee.getName();
+    };
 }

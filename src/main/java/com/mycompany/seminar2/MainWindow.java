@@ -65,6 +65,7 @@ public class MainWindow extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        myTable.setRowHeight(40);
         jScrollPane1.setViewportView(myTable);
         if (myTable.getColumnModel().getColumnCount() > 0) {
             myTable.getColumnModel().getColumn(0).setResizable(false);
@@ -89,19 +90,19 @@ public class MainWindow extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(AddDishButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 545, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1018, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jCheckBox1)
                             .addComponent(jCheckBox2)
                             .addComponent(jCheckBox3)
                             .addComponent(jCheckBox4))))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addGap(31, 31, 31))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,7 +133,7 @@ public class MainWindow extends javax.swing.JFrame {
     private void AddDishButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddDishButtonActionPerformed
         DishInterface dish = BusinessLogic.produceDish();
         if (dish != null)
-        ((DefaultTableModel) myTable.getModel()).addRow(new Object[]{LocalDateTime.now(),"Рагу",dish.getPrice()});
+        ((DefaultTableModel) myTable.getModel()).addRow(new Object[]{LocalDateTime.now(), dish.getName(), dish.getPrice()});
     }//GEN-LAST:event_AddDishButtonActionPerformed
 
     /**

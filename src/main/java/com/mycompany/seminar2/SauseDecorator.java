@@ -15,6 +15,12 @@ public class SauseDecorator extends BaseDishDecorator{
         return super.getPrice() + 20;
     }
     
+    @Override
+    public String getName()
+    {
+        return super.getName() + " с соусом";
+    }
+    
     public SauseDecorator(DishInterface dish) 
     {
         super (dish);

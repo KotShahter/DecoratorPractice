@@ -15,6 +15,12 @@ public class DoubleMeatDecorator extends BaseDishDecorator{
         return super.getPrice() + 80;
     }
     
+    @Override
+    public String getName()
+    {
+        return super.getName() + " с двойным мясом";
+    }
+    
     public DoubleMeatDecorator(DishInterface dish) 
     {
         super (dish);

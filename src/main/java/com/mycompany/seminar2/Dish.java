@@ -10,6 +10,7 @@ package com.mycompany.seminar2;
  */
 public class Dish implements DishInterface {
     private int price = 50;
+    private String name = "Нордское рагу";
     
     public void execute()
     {
@@ -19,5 +20,10 @@ public class Dish implements DishInterface {
     public int getPrice()
     {
         return price;
+    }
+    
+    public String getName()
+    {
+        return name;
     }
 }

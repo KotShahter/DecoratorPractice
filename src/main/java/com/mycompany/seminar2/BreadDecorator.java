@@ -15,6 +15,13 @@ public class BreadDecorator extends BaseDishDecorator{
         return super.getPrice() + 5;
     }
     
+    @Override
+    public String getName()
+    {
+        return super.getName() + "  с хлебом";
+    }
+    
+    
     public BreadDecorator(DishInterface dish) 
     {
         super (dish);
